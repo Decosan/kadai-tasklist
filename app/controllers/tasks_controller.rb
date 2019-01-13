@@ -19,17 +19,17 @@ class TasksController < ApplicationController
     end
   end
   def destroy
-    set_task
+    
     @task.destroy
     
     flash[:success]='削除されました'
     redirect_to tasks_url
   end
   def edit
-    set_task
+    
   end
   def update
-    set_task
+    
     
     if @task.update(task_params)
       flash[:success]='Taskが正常に更新されました'
@@ -40,7 +40,7 @@ class TasksController < ApplicationController
     end
   end
   def show
-    set_task
+    
   end
   
   private
